@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Run Activepiece Flow</title>
+    <title>File Automation Flow</title>
 </head>
 <body>
-    <h2>Click the button to trigger the flow</h2>
+    <h2>File Automation to Google Drive</h2>
+    <p>Click the button below to run the Activepiece flow:</p>
     <button onclick="runFlow()">Run Flow</button>
 
     <script>
         function runFlow() {
-            fetch("https://cloud.activepieces.com/api/v1/webhooks/XzlM7ALud6SjHF7Engblo", {
+            fetch("https://cloud.activepieces.com/api/v1/webhooks/UheRdEB8CP91XT6aHtP9T", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ message: "Hello from client!" })
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    "fileUrl": "https://ibb.co/wrBFDpwN",
+                    "filename": "lord.jpeg"
+
+                })
             })
             .then(response => response.json())
             .then(data => alert("Flow triggered successfully!"))
