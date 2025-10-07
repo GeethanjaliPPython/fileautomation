@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Run Activepiece Flow</title>
+</head>
+<body>
+    <h2>Click the button to trigger the flow</h2>
+    <button onclick="runFlow()">Run Flow</button>
+
+    <script>
+        function runFlow() {
+            fetch("https://cloud.activepieces.com/api/v1/webhooks/XzlM7ALud6SjHF7Engblo", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ message: "Hello from client!" })
+            })
+            .then(response => response.json())
+            .then(data => alert("Flow triggered successfully!"))
+            .catch(err => alert("Error triggering flow: " + err));
+        }
+    </script>
+</body>
+</html>
