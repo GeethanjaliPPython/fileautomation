@@ -5,7 +5,7 @@ This repository contains a simple HTML page to trigger an Activepiece flow.
 ## How to Use
 
 1. Open the following link in your browser:  
-   [Trigger Flow Page]/trigger.html)
+   [Trigger Flow Page](https://github.com/GeethanjaliPPython/fileautomation/blob/main/trigger.html)
 
 2. You will see a button labeled **"Run Flow"**.  
 
